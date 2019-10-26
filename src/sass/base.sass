@@ -1,0 +1,192 @@
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+body
+  background: #E6F5F4
+  font-family: 'PT Serif', serif
+
+section
+  padding-top: 31px
+
+.container
+  width: 1200px
+  margin: 0 auto
+
+h1
+  font-size: 40px
+  line-height: 56px
+  color: #009688
+  text-align: center
+
+p
+  font-family: 'Open Sans', sans-serif
+  font-weight: bold
+  font-size: 20px
+  line-height: 32px
+  color: #ffffff
+  margin: 0
+
+.carousel
+  &__block
+    background: url("../images/dots.png"), linear-gradient(360deg, rgba(0, 0, 0, 0.32) 0%, rgba(0, 0, 0, 0) 100%) #5ECABF
+    margin: 0 16px
+    height: 352px
+    -webkit-border-radius: 8px
+    -moz-border-radius: 8px
+    border-radius: 8px
+    -webkit-background-size: contain
+    background-size: contain
+    position: relative
+    cursor: pointer
+    &:before
+      content: ''
+      background: #00645B
+      opacity: 0.3
+      -ms-filter: blur(12px)
+      filter: blur(12px)
+      -webkit-border-radius: 8px
+      -moz-border-radius: 8px
+      border-radius: 8px
+      position: absolute
+      width: 90%
+      height: 90%
+      top: 56px
+      left: 50%
+      -webkit-transform: translateX(-50%)
+      -moz-transform: translateX(-50%)
+      -ms-transform: translateX(-50%)
+      -o-transform: translateX(-50%)
+      transform: translateX(-50%)
+      z-index: -1
+    &-vline
+      background: url("../images/line-v.png"), linear-gradient(360deg, rgba(0, 0, 0, 0.32) 0%, rgba(0, 0, 0, 0) 100%) #5ECABF
+      -webkit-background-size: contain
+      background-size: contain
+    &-hline
+      background: url("../images/line-h.png"), linear-gradient(360deg, rgba(0, 0, 0, 0.32) 0%, rgba(0, 0, 0, 0) 100%) #5ECABF
+      -webkit-background-size: contain
+      background-size: contain
+    &-green
+      background-color: #009688
+      &:before
+        background: #006452
+    &-orange
+      background-color: #EE7E4A
+      &:before
+        background: #642A00
+    p
+      position: absolute
+      padding: 0 32px
+      bottom: 28px
+      letter-spacing: 0.3px
+
+.slick
+  &-slider
+    padding-top: 7px
+    padding-bottom: 24px
+    position: relative
+  &-slide
+    padding-bottom: 45px
+    > div
+      display: flex
+      padding: 0 24px
+      &:last-child
+        margin-top: 32px
+  &-arrow
+    position: absolute
+    bottom: 2px
+    background: transparent
+    border: none
+    cursor: pointer
+    z-index: 2
+  &-disabled
+    opacity: 0.3
+    cursor: auto
+  &-next
+    right: 38.7%
+  &-prev
+    -webkit-transform: rotate(180deg)
+    -moz-transform: rotate(180deg)
+    -ms-transform: rotate(180deg)
+    -o-transform: rotate(180deg)
+    transform: rotate(180deg)
+    left: 38.7%
+    margin-bottom: 3px
+  &-dots
+    display: flex
+    justify-content: center
+    padding: 0
+    margin: -12px 0 0 0
+    list-style: none
+    button
+      border: none
+      font-size: 0
+      width: 6px
+      height: 6px
+      padding: 0
+      background: #009688
+      opacity: 0.25
+      -webkit-border-radius: 20px
+      -moz-border-radius: 20px
+      border-radius: 20px
+      margin: 0 5px
+  &-active
+    button
+      width: 10px
+      height: 10px
+      opacity: 1
+
+@media (max-width: 1280px)
+  section
+    padding-top: 22px
+
+  .container
+    width: 768px
+
+  h1
+    font-size: 32px
+    line-height: 48px
+
+  .carousel
+    &__block
+      height: 328px
+
+  .slick
+    &-slide
+      padding-top: 6px
+    &-next
+      right: 33%
+    &-prev
+      left: 33%
+
+@media (max-width: 776px)
+  section
+    padding-top: 10px
+
+  body
+    margin: 0
+
+  h1
+    font-size: 28px
+    line-height: 40px
+
+  p
+    font-size: 18px
+    line-height: 28px
+
+  .container
+    width: 320px
+
+  .carousel
+    &__block
+      height: 244px
+      margin: 0 8px
+
+  .slick
+    &-slider
+      padding-top: 16px
+    &-dots
+      margin: 21px 0 0 0
+
